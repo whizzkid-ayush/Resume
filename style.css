@@ -1,0 +1,219 @@
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+body{
+    background-color: lightblue;
+    display:grid;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    
+}
+ /*min height in body tag is used to define the size of the page */ 
+.container
+{
+    position: relative;
+    width: 100%;
+    max-width: 1000px;
+    min-height: 1000px;
+    background-color: white;
+    display: grid;
+    margin: 50px;
+    grid-template-columns: 1fr 2fr;
+    box-shadow: 0 35px 55px rgba(rgb(255, 255, 255), rgb(255, 255, 255), rgb(254, 254, 255), 0.1);
+}
+.protext{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 20px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.protext .imgbox{
+position: relative;
+width: 200px;
+height: 200px;
+border-radius: 50%;
+max-width: 100%;
+max-height: 100%;
+overflow: hidden;
+}
+.protext .imgbox img1{
+    top: 0;
+    left: 0;
+    display: block;
+}
+.protext h2{
+    color: white;
+    font-size: 1.5em;
+    margin-top: 30px;
+    text-align: center;
+    font-weight: 600;
+    line-height: 1.4em;
+    text-transform: uppercase;
+}
+.protext h2 span{
+    font-size: 0.8em;
+    font-weight: 300;
+}
+.contactInfo{
+    padding-top: 40px;
+}
+.title{
+    color: white;
+    text-transform: uppercase;
+    font-weight: 600;
+    letter-spacing: 1px;
+}
+.contactInfo ul{
+position: relative;
+}
+.contactInfo ul li{
+    position: relative;
+    list-style: none;
+    margin: 10px 0;      /*left Right , top bottom*/
+    cursor: pointer;   
+    padding: 1.5px;
+}
+
+.contactInfo ul li span{
+    color: white;
+}
+.container .left{
+    position: relative;
+    background-color: #003147;
+    padding: 40px;
+}
+.contactInfo .Education li{
+    margin-bottom: 15px;
+}
+
+.Education li h5{
+    color: #03a9f4;
+    font-weight: 500;
+}
+
+.Education li h4{
+    color: #ffffff;
+    font-weight: 500;
+}
+.contactInfo.language .percent{
+    position: relative;
+    width: 100%;
+    height: 6px;
+    background: rgb(0, 0, 0);
+    display: flex;
+    margin-top: 5px;
+}
+
+.contactInfo.language .percent div{
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    background: #03a9f4;
+}
+.about{
+    margin-bottom: 30px;
+}
+
+.title2{
+    color: #003147;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 10px;
+}
+p{
+    color: #333;
+    font-size: 18px
+}
+
+.container .right{
+    position: relative;
+    background-color: rgb(255, 255, 255);
+    padding: 40px;
+    
+}
+.About .box .Hackathon{
+    min-width: 150px;
+}
+.About .box .Hackathon h4{
+   text-transform: uppercase;
+   color: #848c90;
+   font-weight: 600;
+}
+.About .box .text h4{
+    text-transform: uppercase;
+    color: #2a7da2;
+    font-size: 16px;
+}
+.skill .box{
+    position: relative;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 150px 1fr;
+    justify-content: center;
+    align-items: center;
+}
+.skill .box h4{
+    text-transform: uppercase;
+    color: #848c99;
+    font-weight: 500;
+}
+.skill .box .percent{
+    position: relative;
+    width: 100%;
+    height: 10px;
+    background: #ece5e5;
+}
+.skill .box .percent div{
+    position:absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    background: #03a9f4;
+}
+.interest ul{
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+}
+.interest ul li{
+    list-style: none;
+    color: #333;
+    font-weight: 500;
+    margin: 10px 0;
+}
+
+@media (max-width: 1000px)
+{
+    .container{
+        margin: 10px;
+        grid-template-columns: repeat(1,1fr);
+    }
+    .interest ul{
+        grid-template-columns: repeat(2,1fr);
+    }
+}
+
+@media (max-width: 600px)
+{
+    .about .box{
+        flex-direction: column;
+    }
+    .about .box .year{
+        margin-bottom: 5px;
+    }
+    .interest ul{
+        grid-template-columns: repeat(1,1fr);
+    }
+    .skill .box{
+        grid-template-columns: repeat(1,1fr);
+    }
+
+}
